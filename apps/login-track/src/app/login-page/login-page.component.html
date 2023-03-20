@@ -1,0 +1,18 @@
+<section class="login-page" >
+    <h1>First you need to login</h1>
+    <form (submit)="onLogin()">
+        <label>Name:
+            <input type="text"
+            name="name"
+            [(ngModel)]="user.name"
+            placeholder="Your Name">
+        </label>
+        <label>Password:
+            <input type="password"
+            name="password"
+            [(ngModel)]="user.password"
+            placeholder="Your Password">
+        </label>
+        <button>Login</button>
+    </form>
+</section>

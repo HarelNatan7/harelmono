@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+$mainBgc: #DBE4C6;
+$mainColor: #94AF9F;
+$headerBgc: #BBD6B8;
+$secondaryColor: #AEC2B6;
+

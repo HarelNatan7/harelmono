@@ -1,0 +1,21 @@
+.login-page {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  h1 {
+    font-size: 2rem;
+  }
+  form {
+    display: grid;
+    width: 300px;
+    gap: 15px;
+    place-content: space-between;
+    label {
+      display: flex;
+      gap: 7px;
+      justify-content: space-between;
+    }
+  }
+}
