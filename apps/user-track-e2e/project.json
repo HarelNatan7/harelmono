@@ -1,19 +1,19 @@
 {
-  "name": "login-track-e2e",
+  "name": "user-track-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/login-track-e2e/src",
+  "sourceRoot": "apps/user-track-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/login-track-e2e/cypress.config.ts",
-        "devServerTarget": "login-track:serve:development",
+        "cypressConfig": "apps/user-track-e2e/cypress.config.ts",
+        "devServerTarget": "user-track:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "login-track:serve:production"
+          "devServerTarget": "user-track:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/login-track-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/user-track-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["login-track"]
+  "implicitDependencies": ["user-track"]
 }

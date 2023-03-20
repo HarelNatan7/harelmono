@@ -1,25 +1,25 @@
 {
-  "name": "login-track",
+  "name": "user-track",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/login-track/src",
+  "sourceRoot": "apps/user-track/src",
   "prefix": "harelmono",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/login-track",
-        "index": "apps/login-track/src/index.html",
-        "main": "apps/login-track/src/main.ts",
+        "outputPath": "dist/apps/user-track",
+        "index": "apps/user-track/src/index.html",
+        "main": "apps/user-track/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/login-track/tsconfig.app.json",
+        "tsConfig": "apps/user-track/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/login-track/src/favicon.ico",
-          "apps/login-track/src/assets"
+          "apps/user-track/src/favicon.ico",
+          "apps/user-track/src/assets"
         ],
-        "styles": ["apps/login-track/src/styles.scss"],
+        "styles": ["apps/user-track/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "login-track:build:production"
+          "browserTarget": "user-track:build:production"
         },
         "development": {
-          "browserTarget": "login-track:build:development"
+          "browserTarget": "user-track:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,7 +64,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "login-track:build"
+        "browserTarget": "user-track:build"
       }
     },
     "lint": {
@@ -72,8 +72,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "apps/login-track/**/*.ts",
-          "apps/login-track/**/*.html"
+          "apps/user-track/**/*.ts",
+          "apps/user-track/**/*.html"
         ]
       }
     },
@@ -81,7 +81,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/login-track/jest.config.ts",
+        "jestConfig": "apps/user-track/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

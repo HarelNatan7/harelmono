@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'login-track',
+  displayName: 'user-track',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/login-track',
+  coverageDirectory: '../../coverage/apps/user-track',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

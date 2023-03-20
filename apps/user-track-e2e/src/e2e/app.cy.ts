@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('login-track', () => {
+describe('user-track', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('login-track', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome login-track');
+    getGreeting().contains('Welcome user-track');
   });
 });
