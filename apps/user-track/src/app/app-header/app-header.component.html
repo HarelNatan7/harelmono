@@ -1,8 +1,10 @@
 <header>
-  <h1>Welcome To My First Nx</h1>
+  <!-- <h1>Welcome To My First Nx</h1> -->
+  <h1 *ngIf="(user$ | async)?.name">Welcome {{(user$ | async)?.name}}</h1>
     <nav>
         <span routerLink="/" routerLinkActive="active">Home</span> |
         <span routerLink="/login" routerLinkActive="active">Login</span> |
         <span routerLink="/about" routerLinkActive="active">About</span>
       </nav>
+      <button *ngIf="(user$ | async)?.name" (click)="logout()">Logout</button>
 </header>

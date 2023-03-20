@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user-model';
 
 @Injectable({
@@ -10,12 +11,15 @@ export class UserService {
   private USER_STORAGE_KEY = 'users'
   private STORAGE_KEY_LOGGEDIN_USER = 'user'
 
+  private _user$ = new BehaviorSubject<User>(this.getEmptyUser());
+  public user$ = this._user$.asObservable()
+
   constructor() {
     this.createUsers()
   }
 
-  public getUser(): User {
-    return JSON.parse(sessionStorage.getItem(this.STORAGE_KEY_LOGGEDIN_USER) as string)
+  public getUser() {
+     this._user$.next(JSON.parse(sessionStorage.getItem(this.STORAGE_KEY_LOGGEDIN_USER) as string))
   }
 
   private getUsers() {
@@ -30,6 +34,12 @@ export class UserService {
       user = this.save(user)
       this.saveLocalUser(user)
     }
+    this.getUser()
+  }
+
+  public logout(): void {
+    sessionStorage.clear()
+    this._user$.next(this.getEmptyUser())
   }
 
   public getEmptyUser() {
